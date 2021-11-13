@@ -10,7 +10,7 @@ logger = telebot.logger
 logger.setLevel(logging.DEBUG)
 
 
-@bot.message_handler(commands=["start"])
+@bot.message_handler(commands_types=["text"])
 def get_text_messages(message):
     res = message.text.lower().find('tiktok')
 
